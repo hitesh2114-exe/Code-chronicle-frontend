@@ -12,7 +12,7 @@ import SearchProfile from "./components/user/SearchProfile";
 import Issues from "./components/issue/Issues";
 
 import { useAuth } from "./authContext";
-import CreateRepo from "./components/repo/createRepo";
+import CreateRepo from "./components/repo/CreateRepo";
 import DisplayIssue from "./components/issue/DisplayIssue";
 import SearchRepository from "./components/repo/SearchRepository";
 
