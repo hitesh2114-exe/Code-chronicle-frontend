@@ -43,7 +43,6 @@ function Signup() {
           <p
             style={{
               color: "white",
-              marginTop: "1rem",
               textAlign: "left",
               fontSize: "2.2rem",
               // backgroundColor : "yellowgreen",
