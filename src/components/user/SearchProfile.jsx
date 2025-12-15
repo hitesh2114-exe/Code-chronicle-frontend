@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import axios from "axios";
-import "./searchProfile.css";
+import "./SearchProfile.css";
 import { Link } from "react-router-dom";
 
 function SearchProfile() {
