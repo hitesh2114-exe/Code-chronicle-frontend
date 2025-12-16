@@ -14,11 +14,11 @@ function Issues() {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        `http://52.66.249.254:3000/issue/create/${repoId.id}`,
+        `https://codechronicle.duckdns.org/issue/create/${repoId.id}`,
         { title, description }
       );
 
-      await axios.put(`http://52.66.249.254:3000/repo/addIssueId/${repoId.id}`, {
+      await axios.put(`https://codechronicle.duckdns.org/repo/addIssueId/${repoId.id}`, {
         issueId: response.data._id,
       });
 

@@ -12,7 +12,7 @@ function SearchProfile() {
   useEffect(() => {
     const allProfile = async () => {
       try {
-        const response = await axios.get("http://52.66.249.254:3000/allUsers");
+        const response = await axios.get("https://codechronicle.duckdns.org/allUsers");
         setUsersProfile(response.data);
         setSearchResult(response.data);
       } catch (err) {

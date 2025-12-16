@@ -13,7 +13,7 @@ function RepoOwner() {
     const fetchInfo = async () => {
       try {
         const response = await axios.get(
-          `http://52.66.249.254:3000/userProfile/${id}`
+          `https://codechronicle.duckdns.org/userProfile/${id}`
         );
         setUserProfile(response.data);
       } catch (err) {

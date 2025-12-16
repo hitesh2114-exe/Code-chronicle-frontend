@@ -19,7 +19,7 @@ function Repository() {
     // console.log(id);
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://52.66.249.254:3000/repo/id/${id}`);
+        const response = await axios.get(`https://codechronicle.duckdns.org/repo/id/${id}`);
         console.log(response.data);
         setRepository(response.data);
       } catch (err) {
@@ -37,12 +37,12 @@ function Repository() {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://52.66.249.254:3000/repo/delete/${id}`
+        `https://codechronicle.duckdns.org/repo/delete/${id}`
       );
       console.log(response);
 
       await axios.put(
-        `http://52.66.249.254:3000/deleteRepoIdFromProfile/${userId}`,
+        `https://codechronicle.duckdns.org/deleteRepoIdFromProfile/${userId}`,
         {
           repoId: id,
         }

@@ -18,7 +18,7 @@ function Dashboard() {
     const fetchRepositories = async () => {
       try {
         const response = await axios.get(
-          `15.206.186.141:3000/repo/${userId}`
+          `https://codechronicle.duckdns.org/repo/${userId}`
         );
         const userRepos = response.data.repositories || response.data || [];
         setRepositories(userRepos);
@@ -30,7 +30,7 @@ function Dashboard() {
 
     const fetchAllRepositories = async () => {
       try {
-        const response = await axios.get(`15.206.186.141:3000/repo/all`);
+        const response = await axios.get(`https://codechronicle.duckdns.org/repo/all`);
         setSuggestedRepositories(response.data || []);
       } catch (err) {
         console.error("Failed to fetch suggested repositories:", err);

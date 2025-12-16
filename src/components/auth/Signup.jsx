@@ -16,7 +16,7 @@ function Signup() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("http://52.66.249.254:3000/signup", {
+      const res = await axios.post("https://codechronicle.duckdns.org/signup", {
         email: email + "@gmail.com",
         password: password,
         username: username,

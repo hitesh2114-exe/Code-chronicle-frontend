@@ -14,7 +14,7 @@ function Profile() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://52.66.249.254:3000/userProfile/${userId}`
+          `https://codechronicle.duckdns.org/userProfile/${userId}`
         );
         setUserProfile(response.data);
       } catch (err) {
