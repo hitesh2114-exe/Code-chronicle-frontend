@@ -15,7 +15,7 @@ function DisplayIssue() {
   useEffect(() => {
     const fetchIssue = async () => {
       try {
-        const response = await axios.get(`52.66.249.254:3000/issue/${id}`);
+        const response = await axios.get(`http://52.66.249.254:3000/issue/${id}`);
         setIssue(response.data.issue);
       } catch (err) {
         console.error("Error fetching issue", err);
@@ -28,9 +28,9 @@ function DisplayIssue() {
   const handletoggle = async () => {
     try {
       const response = await axios.post(
-        `52.66.249.254:3000/issue/togglestatus/${id}`
+        `http://52.66.249.254:3000/issue/togglestatus/${id}`
       );
-      const refreshed = await axios.get(`52.66.249.254:3000/issue/${id}`);
+      const refreshed = await axios.get(`http://52.66.249.254:3000/issue/${id}`);
       setIssue(refreshed.data.issue);
     } catch (err) {
       console.log("error occured during calling handle toggle", err);
@@ -39,9 +39,9 @@ function DisplayIssue() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`52.66.249.254:3000/issue/delete/${id}`);
+      await axios.delete(`http://52.66.249.254:3000/issue/delete/${id}`);
       await axios.put(
-        `52.66.249.254:3000/repo/deleteIssueFromRepo/${issue.repository._id}`,
+        `http://52.66.249.254:3000/repo/deleteIssueFromRepo/${issue.repository._id}`,
         { issueId: id }
       );
       navigate(`/repo/${issue.repository._id}`);

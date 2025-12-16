@@ -13,7 +13,7 @@ function RepoOwner() {
     const fetchInfo = async () => {
       try {
         const response = await axios.get(
-          `52.66.249.254:3000/userProfile/${id}`
+          `http://52.66.249.254:3000/userProfile/${id}`
         );
         setUserProfile(response.data);
       } catch (err) {

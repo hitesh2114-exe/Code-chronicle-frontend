@@ -14,7 +14,7 @@ function Profile() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `52.66.249.254:3000/userProfile/${userId}`
+          `http://52.66.249.254:3000/userProfile/${userId}`
         );
         setUserProfile(response.data);
       } catch (err) {
