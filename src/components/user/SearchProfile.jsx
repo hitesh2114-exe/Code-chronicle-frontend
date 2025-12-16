@@ -12,7 +12,7 @@ function SearchProfile() {
   useEffect(() => {
     const allProfile = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/allUsers");
+        const response = await axios.get("52.66.249.254:3000/allUsers");
         setUsersProfile(response.data);
         setSearchResult(response.data);
       } catch (err) {

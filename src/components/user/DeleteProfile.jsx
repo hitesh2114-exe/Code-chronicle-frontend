@@ -15,7 +15,7 @@ function DeleteProfile() {
     try {
       localStorage.removeItem("token");
       localStorage.removeItem("userId");
-      axios.delete(`http://localhost:3000/deleteProfile/${userId}`);
+      axios.delete(`52.66.249.254:3000/deleteProfile/${userId}`);
       window.location.href = "/login";
     } catch (err) {
       console.error("error occured during deleteing profile");
